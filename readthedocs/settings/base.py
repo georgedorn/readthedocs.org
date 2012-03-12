@@ -96,10 +96,12 @@ INSTALLED_APPS = [
     'builds',
     'core',
     'rtd_tests',
+    'tracking',
 ]
 
 if DEBUG:
     INSTALLED_APPS.append('django_extensions')
+    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 
 #CARROT_BACKEND = "ghettoq.taproot.Database"
